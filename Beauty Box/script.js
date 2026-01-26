@@ -1,6 +1,7 @@
 const supabaseUrl = "https://kostnrxyjxuiutbtncyp.supabase.co/functions/v1/generate";
 const MESSAGE_LIMIT = 10;
 
+// UI Elements
 const aiInput = document.getElementById('ai-input');
 const aiBtn = document.getElementById('ai-btn');
 const aiResultContainer = document.getElementById('ai-result-container');
@@ -9,7 +10,7 @@ const aiResponse = document.getElementById('ai-response');
 const aiCta = document.getElementById('ai-cta');
 const cursor = document.getElementById('cursor');
 
-// Soft Cursor
+// Custom Cursor
 document.addEventListener('mousemove', (e) => {
     if (cursor) {
         cursor.style.left = e.clientX - 10 + 'px';
@@ -17,9 +18,32 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-document.querySelectorAll('a, button, .feature-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(3)');
+document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(2)');
     el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
+});
+
+// Scroll Reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== "#" && targetId.startsWith("#")) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
 });
 
 function getLimitStatus() {
@@ -52,11 +76,13 @@ async function getAiRecommendation() {
         return;
     }
 
+    // UI Feedback
     aiResultContainer.classList.remove('hidden');
     aiLoading.classList.remove('hidden');
     aiResponse.innerText = "";
     aiCta.classList.add('hidden');
     aiBtn.disabled = true;
+    aiBtn.style.opacity = "0.5";
 
     const systemPrompt = `Du är en expert-hudkonsult för kliniken Beauty Box Stockholm. 
     Vårt sortiment inkluderar: 
@@ -104,28 +130,8 @@ async function getAiRecommendation() {
     } finally {
         aiLoading.classList.add('hidden');
         aiBtn.disabled = false;
+        aiBtn.style.opacity = "1";
     }
 }
 
 if (aiBtn) aiBtn.addEventListener('click', getAiRecommendation);
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('active');
-    });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        if (targetId && targetId !== "#") {
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                e.preventDefault();
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    });
-});
