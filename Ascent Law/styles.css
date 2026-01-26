@@ -1,0 +1,103 @@
+/* Ascent Law - Corporate Trust Design System */
+:root {
+    --bg: #FDFCF7;
+    /* Light Parchment */
+    --text: #0F172A;
+    /* Deep Navy */
+    --accent: #1E293B;
+    /* Slate Gray */
+    --gold: #A58B6D;
+    --surface: #FFFFFF;
+    --border: #E2E8F0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Animations from Center */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Nav */
+.nav-glass {
+    background: rgba(253, 252, 247, 0.95);
+    border-bottom: 2px solid var(--text);
+}
+
+/* Hero - Classic Centered */
+.hero-centered {
+    padding-top: 200px;
+    padding-bottom: 120px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Practice Area Grid */
+.practice-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 3rem;
+    transition: all 0.3s ease;
+}
+
+.practice-card:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05);
+    border-color: var(--gold);
+}
+
+/* AI Section - Professional */
+.ai-consultant-section {
+    background: var(--text);
+    color: white;
+}
+
+.ai-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#ai-btn {
+    background: white;
+    color: var(--text);
+}
+
+#ai-btn:hover {
+    background: var(--gold);
+}
+
+.custom-cursor {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--text);
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .custom-cursor {
+        display: block;
+    }
+}

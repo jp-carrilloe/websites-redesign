@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Box Stockholm | Advanced Esthetics & AI Guide</title>
+    <title>AI-Empowered Industry Demos | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --brand-beige: #F9F7F2;
@@ -13,19 +16,22 @@
             --brand-accent: #C5B097;
         }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--brand-beige); 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-beige);
             color: var(--brand-dark);
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .serif { 
-            font-family: 'Playfair Display', serif; 
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Playfair Display', serif;
         }
 
         .parallax-hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=2070');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -48,12 +54,21 @@
             transform: translateY(0);
         }
 
-        .service-hover {
-            transition: all 0.5s ease;
+        .demo-card {
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
-        .service-hover:hover {
-            transform: translateY(-10px);
+
+        .demo-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
+            border-color: var(--brand-accent);
+        }
+
+        .image-container {
+            background-color: #e5e5e5;
+            overflow: hidden;
+            aspect-ratio: 16/10;
         }
 
         .custom-cursor {
@@ -69,52 +84,13 @@
         }
 
         @media (min-width: 1024px) {
-            .custom-cursor { display: block; }
-        }
-        
-        .image-container {
-            background-color: #e5e5e5;
-            overflow: hidden;
-        }
-
-        /* AI Feature Styles */
-        .ai-card {
-            background: white;
-            border: 1px solid rgba(197, 176, 151, 0.3);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-        }
-
-        .shimmer {
-            background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .dot-pulse {
-            display: flex;
-            gap: 4px;
-        }
-        .dot {
-            width: 6px;
-            height: 6px;
-            background: var(--brand-accent);
-            border-radius: 50%;
-            animation: pulse 1s infinite alternate;
-        }
-        .dot:nth-child(2) { animation-delay: 0.2s; }
-        .dot:nth-child(3) { animation-delay: 0.4s; }
-
-        @keyframes pulse {
-            from { opacity: 0.3; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1.2); }
+            .custom-cursor {
+                display: block;
+            }
         }
     </style>
 </head>
+
 <body class="overflow-x-hidden">
 
     <div id="cursor" class="custom-cursor"></div>
@@ -123,242 +99,194 @@
     <nav class="fixed w-full z-50 nav-glass border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
             <div class="flex flex-col">
-                <span class="text-xl lg:text-2xl font-semibold tracking-[0.2em] uppercase leading-none">Beauty Box</span>
-                <span class="text-[10px] tracking-[0.4em] uppercase text-stone-500 mt-1">Stockholm</span>
-            </div>
-            
-            <div class="hidden lg:flex space-x-10 text-[11px] font-medium uppercase tracking-[0.2em]">
-                <a href="#treatments" class="hover:text-stone-400 transition">Behandlingar</a>
-                <a href="#ai-consultant" class="hover:text-stone-400 transition italic">✨ AI Konsult</a>
-                <a href="#about" class="hover:text-stone-400 transition">Om Oss</a>
-                <a href="#contact" class="hover:text-stone-400 transition">Kontakt</a>
+                <span class="text-xl lg:text-2xl font-semibold tracking-[0.2em] uppercase leading-none">AI Studio</span>
+                <span class="text-[10px] tracking-[0.4em] uppercase text-stone-500 mt-1">Portfolio</span>
             </div>
 
-            <div class="flex items-center space-x-6">
-                <a href="https://www.bokadirekt.se" target="_blank" class="bg-stone-900 text-white px-7 py-3 text-[11px] uppercase tracking-[0.2em] hover:bg-stone-800 transition shadow-lg">
-                    Boka Tid
-                </a>
+            <div class="hidden lg:flex space-x-10 text-[11px] font-medium uppercase tracking-[0.2em]">
+                <a href="#demos" class="hover:text-stone-400 transition">Demos</a>
+                <a href="#vision" class="hover:text-stone-400 transition">Vision</a>
+                <a href="mailto:hello@example.com" class="hover:text-stone-400 transition">Contact</a>
+            </div>
+
+            <div class="flex items-center">
+                <span
+                    class="text-[10px] uppercase tracking-[0.2em] text-stone-400 font-bold border-b border-stone-400 pb-1">Built
+                    with Gemini</span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center text-white parallax-hero overflow-hidden">
+    <header
+        class="relative h-[80vh] flex items-center justify-center text-center text-white parallax-hero overflow-hidden">
         <div class="z-10 px-6 max-w-5xl">
-            <p class="text-[12px] uppercase tracking-[0.6em] mb-6 opacity-80 reveal-on-scroll">Estetik & Medicinsk Hudvård</p>
-            <h1 class="text-5xl md:text-8xl mb-8 leading-tight reveal-on-scroll">Naturlig skönhet, <br><span class="italic font-light">förfinad.</span></h1>
-            <p class="text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto leading-relaxed reveal-on-scroll" style="transition-delay: 200ms;">
-                Vi kombinerar medicinsk expertis med ett konstnärligt öga för att skapa resultat som känns som du.
+            <p class="text-[12px] uppercase tracking-[0.6em] mb-6 opacity-80 reveal-on-scroll">Next-Generation Web Demos
             </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center reveal-on-scroll" style="transition-delay: 400ms;">
-                <a href="#ai-consultant" class="bg-white text-stone-900 px-10 py-4 uppercase tracking-[0.2em] text-[11px] font-bold hover:bg-stone-100 transition shadow-xl">
-                    ✨ Prova AI-Konsulten
-                </a>
-            </div>
+            <h1 class="text-5xl md:text-8xl mb-8 leading-tight reveal-on-scroll">Premium design, <br><span
+                    class="italic font-light">smarter insights.</span></h1>
+            <p class="text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto leading-relaxed reveal-on-scroll"
+                style="transition-delay: 200ms;">
+                Exploring the intersection of high-end aesthetics and integrated AI intelligence across various
+                industries.
+            </p>
         </div>
     </header>
 
-    <!-- Treatment Categories -->
-    <section id="treatments" class="py-32 px-6 lg:px-12 bg-stone-50">
+    <!-- Demo Grid -->
+    <section id="demos" class="py-32 px-6 lg:px-12 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
-                <div>
-                    <span class="text-[11px] uppercase tracking-[0.4em] text-stone-400 mb-4 block">Behandlingar</span>
-                    <h2 class="text-4xl md:text-5xl">Vår expertis</h2>
-                </div>
-                <p class="text-stone-500 max-w-md text-sm leading-relaxed">
-                    Medicinsk hudvård och estetik utförd av legitimerad personal.
-                </p>
+            <div class="mb-24 text-center">
+                <span class="text-[11px] uppercase tracking-[0.4em] text-stone-400 mb-4 block">The Collection</span>
+                <h2 class="text-4xl md:text-5xl">Industry Blueprints</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Treatment cards... same as before -->
-                <div class="service-hover reveal-on-scroll">
-                    <div class="overflow-hidden mb-6 relative group image-container">
-                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=800" class="w-full h-[450px] object-cover transition duration-700 group-hover:scale-110">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Beauty Box -->
+                <a href="Beauty Box/index.html"
+                    class="demo-card group block bg-stone-50 overflow-hidden reveal-on-scroll">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                     </div>
-                    <h3 class="text-2xl mb-3">Injektioner</h3>
-                    <p class="text-stone-500 text-sm mb-4">Botox & Fillers.</p>
-                </div>
-                <div class="service-hover reveal-on-scroll" style="transition-delay: 200ms;">
-                    <div class="overflow-hidden mb-6 relative group image-container">
-                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" class="w-full h-[450px] object-cover transition duration-700 group-hover:scale-110">
+                    <div class="p-8">
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 mb-2 block">Aesthetic
+                            Medicine</span>
+                        <h3 class="text-2xl mb-4">Beauty Box Stockholm</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Advanced esthetic clinic featuring an AI
+                            skin consultant for personalized treatment guides.</p>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-widest border-b border-stone-800 pb-1">View
+                            Demo</span>
                     </div>
-                    <h3 class="text-2xl mb-3">Dermapen 4</h3>
-                    <p class="text-stone-500 text-sm mb-4">Avancerad microneedling.</p>
-                </div>
-                <div class="service-hover reveal-on-scroll" style="transition-delay: 400ms;">
-                    <div class="overflow-hidden mb-6 relative group image-container">
-                        <img src="https://images.unsplash.com/photo-1516238840914-94dfc0c873ae?auto=format&fit=crop&q=80&w=800" class="w-full h-[450px] object-cover transition duration-700 group-hover:scale-110">
+                </a>
+
+                <!-- Zen Dentistry -->
+                <a href="Zen Dentistry/index.html"
+                    class="demo-card group block bg-stone-50 overflow-hidden reveal-on-scroll"
+                    style="transition-delay: 100ms;">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                     </div>
-                    <h3 class="text-2xl mb-3">HIFU</h3>
-                    <p class="text-stone-500 text-sm mb-4">Icke-kirurgiskt ansiktslyft.</p>
-                </div>
+                    <div class="p-8">
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 mb-2 block">Modern Dental
+                            Care</span>
+                        <h3 class="text-2xl mb-4">Zen Dentistry</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6">A high-end dental clinic with an
+                            AI-powered coordinator helping patients navigate treatments.</p>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-widest border-b border-stone-800 pb-1">View
+                            Demo</span>
+                    </div>
+                </a>
+
+                <!-- Nova Real Estate -->
+                <a href="Nova Real Estate/index.html"
+                    class="demo-card group block bg-stone-50 overflow-hidden reveal-on-scroll"
+                    style="transition-delay: 200ms;">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 mb-2 block">Luxury
+                            Property</span>
+                        <h3 class="text-2xl mb-4">Nova Real Estate</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Exclusive real estate portal integrated
+                            with an AI advisor for lifestyle-based property matching.</p>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-widest border-b border-stone-800 pb-1">View
+                            Demo</span>
+                    </div>
+                </a>
+
+                <!-- Ascent Law -->
+                <a href="Ascent Law/index.html"
+                    class="demo-card group block bg-stone-50 overflow-hidden reveal-on-scroll"
+                    style="transition-delay: 300ms;">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1505664063603-24e48b0179b9?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 mb-2 block">Legal
+                            Counsel</span>
+                        <h3 class="text-2xl mb-4">Ascent Law</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Professional law firm blueprint featuring
+                            an AI legal guide to simplify initial case inquiries.</p>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-widest border-b border-stone-800 pb-1">View
+                            Demo</span>
+                    </div>
+                </a>
+
+                <!-- Vignette Restaurant -->
+                <a href="Vignette Restaurant/index.html"
+                    class="demo-card group block bg-stone-50 overflow-hidden reveal-on-scroll"
+                    style="transition-delay: 400ms;">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 mb-2 block">Fine Dining</span>
+                        <h3 class="text-2xl mb-4">Vignette Gastronomy</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Elegant restaurant experience featuring
+                            an AI sommelier for menu and wine pairings.</p>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-widest border-b border-stone-800 pb-1">View
+                            Demo</span>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
 
-    <!-- ✨ AI HUDKONSULT SECTION -->
-    <section id="ai-consultant" class="py-32 px-6 lg:px-12 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal-on-scroll">
-                <span class="text-[11px] uppercase tracking-[0.4em] text-stone-400 mb-4 block">Innovation</span>
-                <h2 class="text-4xl md:text-5xl mb-6">✨ AI Hudvårds-konsult</h2>
-                <p class="text-stone-600 max-w-2xl mx-auto">Beskriv dina hudvårdsönskemål eller problemområden (t.ex. "fina linjer runt ögonen" eller "trött hy"), så rekommenderar vår intelligenta assistent den bästa behandlingen för dig.</p>
-            </div>
-
-            <div class="ai-card p-8 md:p-12 reveal-on-scroll">
-                <div class="mb-8">
-                    <label class="block text-[10px] uppercase tracking-widest text-stone-400 mb-4">Vad kan vi hjälpa dig med idag?</label>
-                    <textarea id="ai-input" class="w-full bg-stone-50 border border-stone-100 p-6 text-lg focus:outline-none focus:border-stone-300 transition-colors min-h-[150px] resize-none" placeholder="Skriv här..."></textarea>
+    <!-- Vision Section -->
+    <section id="vision" class="py-32 px-6 lg:px-12 bg-stone-900 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-[11px] font-bold uppercase tracking-[0.5em] text-stone-500 mb-10 block">The Vision</span>
+            <h2 class="text-4xl md:text-6xl mb-12 serif leading-snug">Design that whispers, <br>Intelligence that <span
+                    class="italic">speaks.</span></h2>
+            <p class="text-stone-400 text-lg md:text-xl font-light leading-relaxed mb-16">
+                Our approach combines minimal, premium aesthetics with the raw power of LLMs. By embedding specialized
+                AI consultants directly into the user experience, we transform static websites into interactive partners
+                that guide, advise, and convert.
+            </p>
+            <div class="flex justify-center gap-12 text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500">
+                <div class="flex flex-col gap-2">
+                    <span class="text-white text-2xl serif">GEMINI</span>
+                    <span>Intelligence</span>
                 </div>
-                
-                <div class="flex justify-between items-center">
-                    <p class="text-[10px] text-stone-400 italic">Drivs av Gemini AI Intelligence</p>
-                    <button id="ai-btn" class="bg-stone-900 text-white px-10 py-4 uppercase tracking-[0.2em] text-[11px] font-bold hover:bg-stone-800 transition-all shadow-lg flex items-center gap-3">
-                        ✨ Analysera
-                    </button>
+                <div class="flex flex-col gap-2">
+                    <span class="text-white text-2xl serif">ULTRA-MINIMAL</span>
+                    <span>Design</span>
                 </div>
-
-                <div id="ai-result-container" class="mt-12 hidden border-t border-stone-100 pt-12">
-                    <div id="ai-loading" class="hidden">
-                        <div class="flex flex-col items-center gap-4">
-                            <div class="dot-pulse">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span class="text-[10px] uppercase tracking-widest text-stone-400">Konsulterar vår expertis...</span>
-                        </div>
-                    </div>
-                    <div id="ai-response" class="serif text-xl md:text-2xl leading-relaxed text-stone-800 italic">
-                        <!-- AI Response goes here -->
-                    </div>
-                    <div id="ai-cta" class="mt-10 hidden">
-                        <a href="https://www.bokadirekt.se" target="_blank" class="border-b border-stone-800 pb-1 text-[11px] uppercase tracking-widest font-bold">Gå vidare till bokning</a>
-                    </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-white text-2xl serif">RESPONSE-FIRST</span>
+                    <span>Architecture</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats / CTA ... same as before -->
-    <section class="py-24 bg-stone-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-            <div class="reveal-on-scroll">
-                <p class="text-4xl serif mb-2">10k+</p>
-                <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400">Behandlingar</p>
-            </div>
-            <div class="reveal-on-scroll" style="transition-delay: 100ms;">
-                <p class="text-4xl serif mb-2">100%</p>
-                <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400">Legitimerad Personal</p>
-            </div>
-            <div class="reveal-on-scroll" style="transition-delay: 200ms;">
-                <p class="text-4xl serif mb-2">4.9/5</p>
-                <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400">Kundbetyg</p>
-            </div>
-            <div class="reveal-on-scroll" style="transition-delay: 300ms;">
-                <p class="text-4xl serif mb-2">CIDESCO</p>
-                <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400">Certifierad</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-white border-t border-stone-100 pt-24 pb-12 px-6 lg:px-12">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-stone-400">
-            <p>&copy; 2024 Beauty Box Stockholm. Skapad med AI-stöd.</p>
+    <footer class="bg-white border-t border-stone-100 py-20 px-6 lg:px-12">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-stone-400">
+            <p>&copy; 2024 AI Studio Portfolio. Built with passion & precision.</p>
+            <div class="flex space-x-8 mt-6 md:mt-0">
+                <a href="#" class="hover:text-stone-600">Twitter</a>
+                <a href="#" class="hover:text-stone-600">LinkedIn</a>
+                <a href="#" class="hover:text-stone-600">GitHub</a>
+            </div>
         </div>
     </footer>
 
     <script>
-        const apiKey = "";
-        const modelName = "gemini-2.5-flash-preview-09-2025";
-        
-        // UI Elements
-        const aiInput = document.getElementById('ai-input');
-        const aiBtn = document.getElementById('ai-btn');
-        const aiResultContainer = document.getElementById('ai-result-container');
-        const aiLoading = document.getElementById('ai-loading');
-        const aiResponse = document.getElementById('ai-response');
-        const aiCta = document.getElementById('ai-cta');
-
-        async function getAiRecommendation() {
-            const userQuery = aiInput.value.trim();
-            if (!userQuery) return;
-
-            // UI Feedback
-            aiResultContainer.classList.remove('hidden');
-            aiLoading.classList.remove('hidden');
-            aiResponse.innerText = "";
-            aiCta.classList.add('hidden');
-            aiBtn.disabled = true;
-            aiBtn.style.opacity = "0.5";
-
-            const systemPrompt = `Du är en expert-hudkonsult för kliniken Beauty Box Stockholm. 
-            Vårt sortiment inkluderar: 
-            - Botox (för dynamiska rynkor)
-            - Fillers (volym och konturering)
-            - Dermapen 4 (microneedling för ärr, textur, lyster)
-            - Kemisk Peeling (för akne, pigmentering)
-            - HIFU (icke-kirurgiskt lyft)
-            - EMSCULPT (muskeltoning).
-            
-            Baserat på användarens beskrivning, rekommendera EN eller TVÅ mest lämpliga behandlingar. 
-            Svara vänligt, professionellt och kortfattat (max 3-4 meningar). 
-            Språk: Svenska. Avsluta med att säga att en konsultation på plats alltid krävs.`;
-
-            const payload = {
-                contents: [{
-                    parts: [{ text: userQuery }]
-                }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                }
-            };
-
-            const fetchWithRetry = async (url, options, retries = 5, backoff = 1000) => {
-                try {
-                    const response = await fetch(url, options);
-                    if (!response.ok) throw new Error('API request failed');
-                    return await response.json();
-                } catch (error) {
-                    if (retries > 0) {
-                        await new Promise(r => setTimeout(r, backoff));
-                        return fetchWithRetry(url, options, retries - 1, backoff * 2);
-                    }
-                    throw error;
-                }
-            };
-
-            try {
-                const result = await fetchWithRetry(
-                    `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`,
-                    {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    }
-                );
-
-                const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
-                if (text) {
-                    aiResponse.innerText = text;
-                    aiCta.classList.remove('hidden');
-                } else {
-                    throw new Error("Empty response");
-                }
-            } catch (err) {
-                aiResponse.innerHTML = "<span class='text-red-400'>Vi kunde tyvärr inte nå vår AI-assistent just nu. Vänligen kontakta kliniken direkt eller försök igen senare.</span>";
-            } finally {
-                aiLoading.classList.add('hidden');
-                aiBtn.disabled = false;
-                aiBtn.style.opacity = "1";
-            }
-        }
-
-        aiBtn.addEventListener('click', getAiRecommendation);
-
         // Scroll Reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -367,6 +295,18 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Custom Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(2)');
+            el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
+        });
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -383,4 +323,5 @@
         });
     </script>
 </body>
+
 </html>

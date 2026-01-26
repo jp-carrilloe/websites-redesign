@@ -1,0 +1,127 @@
+/* Nova Real Estate - Bold Editorial Design System */
+:root {
+    --bg: #0A0A0A;
+    --text: #F5F5F5;
+    --accent: #D4AF37;
+    /* Metallic Gold */
+    --muted: #404040;
+    --surface: #171717;
+    --border: #262626;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(4px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* Nav */
+.nav-glass {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+}
+
+/* Hero */
+.hero-full {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+}
+
+/* Property Cards */
+.property-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.property-card:hover {
+    border-color: var(--accent);
+}
+
+.property-card img {
+    transition: transform 0.6s ease;
+}
+
+.property-card:hover img {
+    transform: scale(1.1);
+}
+
+/* AI Section */
+.ai-consultant-box {
+    background: linear-gradient(135deg, #171717 0%, #0A0A0A 100%);
+    border: 1px solid var(--border);
+}
+
+#ai-btn {
+    background: var(--accent);
+    color: black;
+    transition: all 0.3s ease;
+}
+
+#ai-btn:hover {
+    background: #E5C35D;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.dot {
+    background: var(--accent);
+}
+
+.custom-cursor {
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.15s ease;
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .custom-cursor {
+        display: block;
+    }
+}

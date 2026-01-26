@@ -1,0 +1,119 @@
+/* Vignette Restaurant - Atmospheric Fine Dining Design System */
+:root {
+    --bg: #12100E;
+    /* Deep Charcoal/Brown */
+    --text: #F3E5D8;
+    /* Cream/Champagne */
+    --accent: #8B4513;
+    /* Saddle Brown */
+    --gold: #C5A059;
+    --surface: #1C1917;
+    --border: #3E3B39;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.script {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* Atmospheric Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    filter: blur(8px);
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Navigation */
+.nav-glass {
+    background: rgba(18, 16, 14, 0.95);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Hero - Full Immersive */
+.hero-vignette {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Menu Grid */
+.menu-item {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+    transition: all 0.4s ease;
+}
+
+.menu-item:hover {
+    padding-left: 1rem;
+    border-color: var(--gold);
+}
+
+/* AI Sommelier Section */
+.sommelier-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.sommelier-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(197, 160, 89, 0.05), transparent);
+}
+
+#ai-btn {
+    background: var(--gold);
+    color: var(--bg);
+}
+
+#ai-btn:hover {
+    background: #D4B170;
+}
+
+.dot {
+    background: var(--gold);
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease;
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .custom-cursor {
+        display: block;
+    }
+}

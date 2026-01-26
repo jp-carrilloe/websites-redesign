@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent Law | Strategisk Juridik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="cursor" class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-8 h-8 bg-[#0F172A] flex items-center justify-center text-white font-bold text-xs italic">A
+                </div>
+                <span class="text-lg font-bold tracking-tight text-[#0F172A] uppercase">Ascent Law</span>
+            </div>
+
+            <div class="hidden lg:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em] text-stone-500">
+                <a href="#expertise" class="hover:text-stone-900 transition">Expertis</a>
+                <a href="#ai-guide" class="hover:text-stone-900 transition">AI Guide</a>
+                <a href="#firm" class="hover:text-stone-900 transition">Byrån</a>
+            </div>
+
+            <a href="#" class="bg-[#0F172A] text-white px-7 py-2.5 text-[10px] uppercase tracking-widest font-bold">
+                Engagement
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-centered px-6">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-[10px] uppercase tracking-[0.4em] text-stone-400 mb-6 block reveal-on-scroll">Stockholm •
+                London • New York</span>
+            <h1 class="text-6xl md:text-8xl mb-8 reveal-on-scroll" style="transition-delay: 100ms;">Klarhet i en
+                <br><span class="italic font-light">komplex värld.</span></h1>
+            <p class="text-stone-500 text-lg max-w-2xl mx-auto mb-16 font-light leading-relaxed reveal-on-scroll"
+                style="transition-delay: 200ms;">
+                Vi levererar strategisk juridisk rådgivning genom djupgående analys och orubblig integritet. Din affär
+                är vår prioritet.
+            </p>
+            <div class="flex justify-center gap-12 reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="text-center">
+                    <p class="text-2xl font-bold">25+</p>
+                    <p class="text-[9px] uppercase tracking-widest text-stone-400">Partners</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold">98%</p>
+                    <p class="text-[9px] uppercase tracking-widest text-stone-400">Success Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise -->
+    <section id="expertise" class="py-32 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center space-x-8 mb-24 reveal-on-scroll">
+                <h2 class="text-4xl md:text-5xl uppercase tracking-tighter">Områden</h2>
+                <div class="flex-grow h-[1px] bg-stone-200"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="practice-card reveal-on-scroll">
+                    <h3 class="text-xl mb-4 italic">01.</h3>
+                    <h4 class="text-2xl mb-4">Corporate & M&A</h4>
+                    <p class="text-stone-500 text-sm leading-relaxed">Strategiska transaktioner och bolagsstyrning på
+                        högsta nivå.</p>
+                </div>
+                <div class="practice-card reveal-on-scroll" style="transition-delay: 100ms;">
+                    <h3 class="text-xl mb-4 italic">02.</h3>
+                    <h4 class="text-2xl mb-4">Dispute Resolution</h4>
+                    <p class="text-stone-500 text-sm leading-relaxed">Effektiv tvistelösning genom medling och rättsliga
+                        processer.</p>
+                </div>
+                <div class="practice-card reveal-on-scroll" style="transition-delay: 200ms;">
+                    <h3 class="text-xl mb-4 italic">03.</h3>
+                    <h4 class="text-2xl mb-4">Real Estate Law</h4>
+                    <p class="text-stone-500 text-sm leading-relaxed">Komplexa fastighetstransaktioner och
+                        hyresrättsliga ärenden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Guide Section -->
+    <section id="ai-guide" class="ai-consultant-section py-32 px-6 lg:px-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="reveal-on-scroll">
+                    <span class="text-[10px] uppercase tracking-[0.4em] text-stone-500 mb-6 block">Innovation</span>
+                    <h2 class="text-5xl md:text-6xl serif italic mb-8">✨ Den Juridiska <br>Vägvisaren.</h2>
+                    <p class="text-stone-400 font-light leading-relaxed">
+                        Beskriv din juridiska situation i breda drag. Vår AI-assisterade guide hjälper dig att
+                        kategorisera ärendet och initiera rätt team för din sak.
+                    </p>
+                </div>
+
+                <div class="ai-box p-12 reveal-on-scroll" style="transition-delay: 200ms;">
+                    <textarea id="ai-input"
+                        class="w-full bg-transparent border-b border-stone-800 p-0 pb-6 text-xl text-stone-400 focus:outline-none focus:border-white transition-all resize-none min-h-[160px]"
+                        placeholder="Problembeskrivning..."></textarea>
+
+                    <div class="mt-8 flex justify-between items-center">
+                        <span class="text-[9px] uppercase tracking-widest text-stone-600">Strict Confidentiality</span>
+                        <button id="ai-btn"
+                            class="px-10 py-4 text-[10px] uppercase tracking-[0.3em] font-black transition-all">
+                            Analysera Ärende
+                        </button>
+                    </div>
+
+                    <div id="ai-result-container" class="mt-12 hidden">
+                        <div id="ai-loading" class="hidden pb-4">
+                            <span class="text-[10px] uppercase tracking-widest opacity-50">Processar data...</span>
+                        </div>
+                        <div id="ai-response" class="serif text-xl italic text-white leading-relaxed mb-6">
+                            <!-- Result -->
+                        </div>
+                        <div id="ai-cta" class="hidden">
+                            <a href="#" class="text-[10px] uppercase tracking-widest border-b border-white pb-1">Boka
+                                Prioriterat Möte</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 bg-[#0F172A] text-white text-center">
+        <p class="text-[9px] uppercase tracking-[0.6em] opacity-40">Ascent Law Group &copy; 2026. Integrity First.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

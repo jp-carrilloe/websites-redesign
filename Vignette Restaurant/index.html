@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignette | Atmosfärisk Gastronomi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="cursor" class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <div class="flex flex-col items-center">
+                <span class="text-2xl font-bold tracking-[0.3em] text-[#C5A059]">VIGNETTE</span>
+                <span class="text-[8px] tracking-[0.8em] uppercase text-stone-500 mt-1">Fine Dining</span>
+            </div>
+
+            <div class="hidden lg:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.3em] text-stone-400">
+                <a href="#menu" class="hover:text-white transition">Meny</a>
+                <a href="#sommelier" class="hover:text-white transition">Sommelier</a>
+                <a href="#experience" class="hover:text-white transition">Upplevelsen</a>
+            </div>
+
+            <a href="#"
+                class="text-[#C5A059] text-[10px] uppercase tracking-widest font-black border-b border-[#C5A059] pb-1">
+                Reservations
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-vignette text-center px-6">
+        <span class="text-[10px] uppercase tracking-[0.8em] text-[#C5A059] mb-8 block reveal-on-scroll">Est. 2012</span>
+        <h1 class="text-6xl md:text-8xl mb-6 reveal-on-scroll serif" style="transition-delay: 100ms;">Poesi på <br><span
+                class="script font-light">ett fat.</span></h1>
+        <p class="text-stone-300 text-lg max-w-xl mx-auto font-light leading-relaxed reveal-on-scroll"
+            style="transition-delay: 200ms;">
+            Vi hyllar hantverket, jorden och det oväntade mötet mellan klassisk teknik och moderna smaker.
+        </p>
+    </header>
+
+    <!-- Menu Selection -->
+    <section id="menu" class="py-40 px-6 lg:px-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-32">
+                <span
+                    class="text-[#C5A059] text-[10px] uppercase tracking-[0.5em] mb-4 block reveal-on-scroll">Selection</span>
+                <h2 class="text-5xl md:text-7xl serif italic reveal-on-scroll">Kvällens meny.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                <div class="space-y-16">
+                    <div class="menu-item reveal-on-scroll">
+                        <div class="flex justify-between items-end mb-4">
+                            <h3 class="text-2xl font-light">Säsongens Avsmakning</h3>
+                            <span class="text-[#C5A059]">1850:-</span>
+                        </div>
+                        <p class="text-stone-500 text-sm leading-relaxed">Sju serveringar baserade på morgonens skörd
+                            och fångst.</p>
+                    </div>
+                    <div class="menu-item reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="flex justify-between items-end mb-4">
+                            <h3 class="text-2xl font-light">Vegetariskt Spår</h3>
+                            <span class="text-[#C5A059]">1450:-</span>
+                        </div>
+                        <p class="text-stone-500 text-sm leading-relaxed">En hyllning till det gröna med komplexa
+                            texturer och djup.</p>
+                    </div>
+                </div>
+                <div class="space-y-16">
+                    <div class="menu-item reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="flex justify-between items-end mb-4">
+                            <h3 class="text-2xl font-light">Prestigepaketet</h3>
+                            <span class="text-[#C5A059]">2200:-</span>
+                        </div>
+                        <p class="text-stone-500 text-sm leading-relaxed">Viner som sällan lämnar vår privata källare.
+                        </p>
+                    </div>
+                    <div class="menu-item reveal-on-scroll" style="transition-delay: 300ms;">
+                        <div class="flex justify-between items-end mb-4">
+                            <h3 class="text-2xl font-light">Alkoholfri Elegans</h3>
+                            <span class="text-[#C5A059]">850:-</span>
+                        </div>
+                        <p class="text-stone-500 text-sm leading-relaxed">Egendestillerade essenser och hantverksjuicer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Sommelier -->
+    <section id="sommelier" class="py-40 px-6 lg:px-12 bg-[#171513]">
+        <div class="max-w-4xl mx-auto">
+            <div class="sommelier-box p-12 md:p-24 reveal-on-scroll">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-6xl serif italic mb-6">✨ Den Digitala <br>Sommelieren.</h2>
+                    <p class="text-stone-400 font-light max-w-2xl mx-auto">
+                        Beskriv dina matpreferenser eller din favoritstil av vin. Låt vår intelligenta guide hjälpa dig
+                        att hitta den perfekta matchningen för kvällen.
+                    </p>
+                </div>
+
+                <div class="space-y-10">
+                    <textarea id="ai-input"
+                        class="w-full bg-stone-900/50 border border-stone-800 p-8 text-xl text-stone-300 focus:outline-none focus:border-[#C5A059] transition-all resize-none min-h-[160px]"
+                        placeholder="Berätta om dina smaker..."></textarea>
+
+                    <div class="flex justify-center">
+                        <button id="ai-btn"
+                            class="px-16 py-5 text-[11px] uppercase tracking-[0.4em] font-black transition-all">
+                            Fråga Sommelieren
+                        </button>
+                    </div>
+                </div>
+
+                <div id="ai-result-container" class="mt-16 hidden">
+                    <div id="ai-loading" class="hidden text-center py-4">
+                        <div class="dot-pulse inline-flex">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div id="ai-response"
+                        class="serif text-2xl italic text-white text-center leading-relaxed mb-10 max-w-3xl mx-auto">
+                        <!-- Result -->
+                    </div>
+                    <div id="ai-cta" class="hidden text-center">
+                        <a href="#" class="text-[#C5A059] text-[10px] uppercase tracking-widest font-bold">Boka din
+                            upplevelse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 border-t border-stone-900 text-center">
+        <p class="text-stone-600 text-[9px] uppercase tracking-[0.8em]">&copy; 2026 Vignette Restaurant. Framed in
+            flavor.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

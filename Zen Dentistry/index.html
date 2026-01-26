@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Dentistry | Precision & Estetik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="cursor" class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-glass border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-xl font-semibold tracking-tighter">ZEN DENTISTRY</span>
+                <span class="text-[9px] tracking-[0.3em] uppercase text-stone-400">Stockholm Clinic</span>
+            </div>
+
+            <div class="hidden lg:flex space-x-12 text-[10px] font-semibold uppercase tracking-widest text-stone-500">
+                <a href="#services" class="hover:text-sky-500 transition">Services</a>
+                <a href="#ai-consultant" class="hover:text-sky-500 transition">AI Guide</a>
+                <a href="#about" class="hover:text-sky-500 transition">About</a>
+            </div>
+
+            <a href="#"
+                class="bg-stone-900 text-white px-6 py-2.5 text-[10px] uppercase tracking-widest font-bold hover:bg-stone-700 transition">
+                Book Visit
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-grid">
+        <div class="flex items-center justify-center p-12 lg:p-24 bg-white">
+            <div class="max-w-xl">
+                <span
+                    class="text-sky-500 font-bold text-[10px] uppercase tracking-[0.4em] mb-4 block reveal-on-scroll">Aesthetic
+                    Excellence</span>
+                <h1 class="text-6xl md:text-8xl mb-8 leading-[0.9] reveal-on-scroll" style="transition-delay: 100ms;">
+                    Harmoni i varje leende.</h1>
+                <p class="text-stone-500 text-lg mb-10 font-light reveal-on-scroll" style="transition-delay: 200ms;">
+                    Vi kombinerar kirurgisk precision med en rofylld miljö för att skapa ditt mest naturliga leende
+                    någonsin.
+                </p>
+                <div class="reveal-on-scroll" style="transition-delay: 300ms;">
+                    <a href="#ai-consultant"
+                        class="inline-block border-b-2 border-stone-900 pb-1 text-[11px] font-bold uppercase tracking-widest hover:border-sky-500 hover:text-sky-500 transition">
+                        ✨ Start AI Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden lg:block relative overflow-hidden bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070"
+                class="absolute inset-0 w-full h-full object-cover">
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-32 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24 items-end">
+                <h2 class="text-5xl md:text-6xl leading-tight reveal-on-scroll">Vår passion för <br><span
+                        class="text-sky-500 italic">detaljer.</span></h2>
+                <p class="text-stone-400 max-w-sm mb-2 reveal-on-scroll">Från osynlig tandställning till holistisk
+                    rekonstruktion.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="service-card p-10 reveal-on-scroll">
+                    <div class="text-sky-500 text-3xl mb-12">01</div>
+                    <h3 class="text-2xl mb-4">Invisalign</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Modern ortodonti som knappt syns men känns i varje
+                        leende.</p>
+                </div>
+                <div class="service-card p-10 reveal-on-scroll" style="transition-delay: 100ms;">
+                    <div class="text-stone-300 text-3xl mb-12">02</div>
+                    <h3 class="text-2xl mb-4">Skalfasader</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Handgjorda keramiska ytor som återger tändernas
+                        naturliga lyster.</p>
+                </div>
+                <div class="service-card p-10 reveal-on-scroll" style="transition-delay: 200ms;">
+                    <div class="text-stone-300 text-3xl mb-12">03</div>
+                    <h3 class="text-2xl mb-4">Regeneration</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Avancerad behandling för att återskapa förlorad
+                        vävnad och styrka.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Guide -->
+    <section id="ai-consultant" class="py-32 px-6 lg:px-12 bg-stone-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="ai-section p-10 md:p-20 bg-white border border-stone-100 reveal-on-scroll">
+                <div class="mb-12">
+                    <h2 class="text-4xl mb-6">✨ AI Tandkoordinator</h2>
+                    <p class="text-stone-500">Berätta vad du funderar på gällande dina tänder eller ditt leende. Vår
+                        AI-assistent ger dig en personlig rekommendation direkt.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <textarea id="ai-input"
+                        class="w-full border-none bg-stone-50 p-6 text-lg focus:ring-1 focus:ring-sky-500 outline-none transition-all min-h-[160px] resize-none"
+                        placeholder="Beskriv dina önskemål..."></textarea>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-[9px] uppercase tracking-widest text-stone-300 font-bold">Encrypted &
+                            Secure</span>
+                        <button id="ai-btn"
+                            class="bg-stone-900 text-white px-10 py-4 text-[11px] uppercase tracking-widest font-bold hover:bg-sky-500 transition-all">
+                            Analysera Behov
+                        </button>
+                    </div>
+                </div>
+
+                <div id="ai-result-container" class="mt-12 hidden">
+                    <div id="ai-loading" class="hidden">
+                        <div class="dot-pulse py-4">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div id="ai-response"
+                        class="serif text-2xl italic text-stone-800 leading-relaxed border-l-4 border-sky-500 pl-8">
+                        <!-- Response -->
+                    </div>
+                    <div id="ai-cta" class="mt-8 hidden">
+                        <a href="#"
+                            class="text-[10px] font-bold uppercase tracking-widest text-stone-400 border-b border-stone-200 pb-1 hover:text-stone-900 transition">Boka
+                            tid för undersökning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 border-t border-stone-100 text-center">
+        <p class="text-[10px] uppercase tracking-[0.4em] text-stone-400">&copy; 2026 Zen Dentistry Stockholm. All Rights
+            Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
