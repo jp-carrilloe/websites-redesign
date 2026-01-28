@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+npm-debug.log
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# Environments
+.env
+.env.*
+!.env.example
